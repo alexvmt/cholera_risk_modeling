@@ -6,12 +6,12 @@ from bs4 import BeautifulSoup
 import requests
 import urllib3
 
-if os.path.isdir('data'):
+if os.path.isdir('../data'):
     pass
 else:
-    os.mkdir('data')
+    os.mkdir('../data')
 
-os.chdir('data')
+os.chdir('../data')
 
 if os.path.isdir('cholera_outbreaks'):
     pass
@@ -33,8 +33,6 @@ for year in years:
     else:
         os.mkdir(year)
 
-os.chdir('../..')
-
 def get_file_names(url, ext):
     page = requests.get(url, verify=False).text
     soup = BeautifulSoup(page, 'html.parser')
@@ -53,5 +51,5 @@ for year in years:
     print('Processing {} with {} files...'.format(year, len(file_names)))
     for file in file_names:
         r = requests.get(file, verify=False)
-        with open('data/cholera_outbreaks/'+year+'/'+file.split('/')[-1], 'wb') as f:
+        with open(year+'/'+file.split('/')[-1], 'wb') as f:
             f.write(r.content)
