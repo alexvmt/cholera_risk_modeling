@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
+#!/bin/python
+
+print('Download cholera outbreaks data...')
 
 import os
 from bs4 import BeautifulSoup
@@ -21,11 +22,11 @@ else:
 os.chdir('cholera_outbreaks')
 
 years = ['2010',
-             '2011',
-             '2012',
-             '2013',
-             '2014',
-             '2015']
+              '2011',
+              '2012',
+              '2013',
+              '2014',
+              '2015']
 
 for year in years:
     if os.path.isdir(year):
@@ -53,3 +54,5 @@ for year in years:
         r = requests.get(file, verify=False)
         with open(year+'/'+file.split('/')[-1], 'wb') as f:
             f.write(r.content)
+
+print('Download cholera outbreaks data complete.')
