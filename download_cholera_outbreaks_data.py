@@ -46,9 +46,7 @@ ext = 'pdf'
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 for year in years:
-    file_names = []
-    for file in get_file_names(url+year, ext):
-        file_names.append(file)
+    file_names = get_file_names(url+year, ext)
     print('Processing {} with {} files...'.format(year, len(file_names)))
     for file in file_names:
         r = requests.get(file, verify=False)
