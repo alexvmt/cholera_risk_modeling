@@ -21,12 +21,7 @@ else:
 
 os.chdir('cholera_outbreaks')
 
-years = ['2010',
-              '2011',
-              '2012',
-              '2013',
-              '2014',
-              '2015']
+years = ['2010', '2011', '2012', '2013', '2014', '2015']
 
 for year in years:
     if os.path.isdir(year):
@@ -47,10 +42,14 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 for year in years:
     file_names = get_file_names(url+year, ext)
+    files_in_dir = os.listdir(year)
     print('Processing {} with {} files...'.format(year, len(file_names)))
     for file in file_names:
-        r = requests.get(file, verify=False)
-        with open(year+'/'+file.split('/')[-1], 'wb') as f:
-            f.write(r.content)
+        if file in files_in_dir:
+            pass
+        else:
+            r = requests.get(file, verify=False)
+            with open(year+'/'+file.split('/')[-1], 'wb') as f:
+                f.write(r.content)
 
 print('Download cholera outbreaks data complete.')
