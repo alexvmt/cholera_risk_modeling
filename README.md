@@ -1,4 +1,6 @@
-# cholera_risk_modeling
+# Cholera risk modeling using essential climate variables and machine learning
+
+In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables and using a random forest classifier. At the moment I focus on the years 2010 to 2015 and only on the most predictive essential climate variables (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature) as indicated by Campbell et al. (2020).
 
 ## References
 
@@ -8,7 +10,7 @@ Campbell AM, Racault M-F, Goult S, Laurenson A. Cholera Risk: A Machine Learning
 ### Cholera outbreaks
 National Centre for Disease Control, Directorate General of Health Services. Integrated Disease Surveillance Programme. Available online: http://idsp.nic.in/ (accessed on 18 February 2021).
 
-### Level 2 administrative zones for India provided by the Database of Global Administrative Areas
+### Level 2 administrative zones for India
 University of California, Berkely. Global Administrative Areas. Digital Geospatial Data. 2020. Available online: http://www.gadm.org (accessed on 18 February 2021).
 
 ### Sea surface salinity
@@ -17,4 +19,7 @@ Reul, N.; Grodsky, S.; Arias, M.; Boutin, J.; Catany, R.; Chapron, B.; D’Amico
 ### Chlorophyll-a concentration
 Sathyendranath, S.; Brewin, R.J.W.; Brockmann, C.; Brotas, V.; Calton, B.; Chuprin, A.; Cipollini, P.; Couto, A.B.; Dingle, J.; Doerffer, R.; et al. An Ocean-Colour Time Series for Use in Climate Studies: The Experience of the Ocean-Colour Climate Change Initiative (OC-CCI). Sensors 2019, 19, 4285.
 
-Data on essential climate variables is available at the ESA Climate Change Initiative: https://climate.esa.int/en/odp/#/dashboard
+### Land surface temperature
+Ghent, D.; Veal, K.; Trent, T.; Dodd, E.; Sembhi, H.; Remedios, J. A New Approach to Defining Uncertainties for MODIS Land Surface Temperature. Remote Sens. 2019, 11, 1021.
+
+Most data on essential climate variables is available at the ESA Climate Change Initiative: https://climate.esa.int/en/odp/#/dashboard
