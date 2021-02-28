@@ -1,6 +1,6 @@
 # Cholera risk modeling using essential climate variables and machine learning
 
-In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables and using a random forest classifier. At the moment I focus on the years 2010 to 2015 and only on the most predictive essential climate variables (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature) as indicated by Campbell et al. (2020).
+In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables and using a random forest classifier. I focus on the years 2010 to 2018 and only on the most predictive essential climate variables (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to make keep the amount of data manageable.
 
 ## References
 
@@ -8,10 +8,10 @@ In this project I replicate parts of Campbell et al. (2020), relating cholera ri
 Campbell AM, Racault M-F, Goult S, Laurenson A. Cholera Risk: A Machine Learning Approach Applied to Essential Climate Variables. International Journal of Environmental Research and Public Health. 2020; 17(24):9378. https://doi.org/10.3390/ijerph17249378 
 
 ### Cholera outbreaks
-National Centre for Disease Control, Directorate General of Health Services. Integrated Disease Surveillance Programme. Available online: http://idsp.nic.in/ (accessed on 18 February 2021).
+National Centre for Disease Control, Directorate General of Health Services. Integrated Disease Surveillance Programme. Available online: http://idsp.nic.in/ (accessed on 28 February 2021).
 
 ### Level 2 administrative zones for India
-University of California, Berkely. Global Administrative Areas. Digital Geospatial Data. 2020. Available online: http://www.gadm.org (accessed on 18 February 2021).
+University of California, Berkely. Global Administrative Areas. Digital Geospatial Data. 2020. Available online: http://www.gadm.org (accessed on 28 February 2021).
 
 ### Sea surface salinity
 Reul, N.; Grodsky, S.; Arias, M.; Boutin, J.; Catany, R.; Chapron, B.; D’Amico, F.; Dinnat, E.; Donlon, C.; Fore, A.; et al. Sea surface salinity estimates from spaceborne L-band radiometers: An overview of the first decade of observation (2010–2019). Remote Sens. Environ. 2020, 242, 111769.
