@@ -8,7 +8,7 @@ if [ ! -d ../data/sea_surface_salinity ]; then
   mkdir -p ../data/sea_surface_salinity;
 fi
 # create directories if they don't already exist and download data
-for year in 2010 2011 2012 2013 2014 2015
+for year in 2010 2011 2012 2013 2014 2015 2016 2017 2018
 do
 if [ ! -d ../data/sea_surface_salinity/$year ]; then
   mkdir -p ../data/sea_surface_salinity/$year;
