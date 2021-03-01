@@ -47,4 +47,4 @@ Sathyendranath, S.; Brewin, R.J.W.; Brockmann, C.; Brotas, V.; Calton, B.; Chupr
 ### Land surface temperature
 Ghent, D.; Veal, K.; Trent, T.; Dodd, E.; Sembhi, H.; Remedios, J. A New Approach to Defining Uncertainties for MODIS Land Surface Temperature. Remote Sens. 2019, 11, 1021.
 
-Most data on essential climate variables is available at the ESA Climate Change Initiative: https://climate.esa.int/en/odp/#/dashboard
+Most data on essential climate variables is available at the ESA Climate Change Initiative's [Open Data Portal](https://climate.esa.int/en/odp/#/dashboard)
