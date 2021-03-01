@@ -1,6 +1,31 @@
 # Cholera risk modeling using essential climate variables and machine learning
 
-In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables and using a random forest classifier. I focus on the years 2010 to 2018 and only on the most predictive essential climate variables (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to make keep the amount of data manageable.
+In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables (ECV) and using a random forest classifier.
+
+I focus on the years 2010 to 2018 and only on the most predictive ECV (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of data manageable (~50 GB at the moment).
+
+First, the outbreaks and ECV data need to be downloaded using the following scripts (they can be executed directly from the subsequent notebooks):
+- Cholera outbreaks: download_cholera_outbreaks_data.py
+- Sea surface salinity: download_sea_surface_salinity_data.sh
+- Chlorophyll-a concentration: download_chlorophyll_a_concentration_data.sh
+- Land surface temperature: download_land_surface_temperature_data.sh
+
+Second, the outbreaks and ECV data need to be preprocessed using the following notebooks:
+- Cholera outbreaks: preprocess_cholera_outbreaks.ipynb
+- ECV data: preprocess_essential_climate_variables.ipynb
+
+Third, the data need to be processed to create a train and test set on district and month level using the following notebook:
+- create_train_and_test_set.ipynb
+
+Finally, the train and test set can be used to train a random forest classifier that trys to predict cholera outbreaks:
+- modeling.ipynb
+
+#### TODO
+
+- validate outbreaks and ecv data
+- add more comments
+- exploratory data analysis, create static and interactive maps of outbreaks
+- improve model
 
 ## References
 
