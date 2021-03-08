@@ -11,13 +11,8 @@ fi
 if [ ! -d ../data/chlorophyll_a_concentration ]; then
   mkdir -p ../data/chlorophyll_a_concentration;
 fi
-<<<<<<< HEAD
 # create directories for years if they don't yet exist
-for year in 2010 2011 2012 2013 2014 2015 2016 2017 2018
-=======
-# create directories if they don't already exist and download data
-ffor year in {2010..2018}
->>>>>>> fea8c016ea8be8d0ef32020bebaa97d8fdb8f4ab
+for year in {2010..2018}
 do
 if [ ! -d ../data/chlorophyll_a_concentration/$year ]; then
   mkdir -p ../data/chlorophyll_a_concentration/$year;

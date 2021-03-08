@@ -11,23 +11,14 @@ fi
 if [ ! -d ../data/land_surface_temperature ]; then
   mkdir -p ../data/land_surface_temperature;
 fi
-<<<<<<< HEAD
 # create directories for years if they don't yet exist
-for year in 2010 2011 2012 2013 2014 2015 2016 2017 2018
-=======
 for year in {2010..2018}
->>>>>>> fea8c016ea8be8d0ef32020bebaa97d8fdb8f4ab
 do
 if [ ! -d ../data/land_surface_temperature/$year ]; then
   mkdir -p ../data/land_surface_temperature/$year;
 fi
-<<<<<<< HEAD
 # create directories for months if they don't yet exist
-for month in 01 02 03 04 05 06 07 08 09 10 11 12
-=======
-# create directories if they don't already exist and download data
 for month in {01..12}
->>>>>>> fea8c016ea8be8d0ef32020bebaa97d8fdb8f4ab
 do
 # download data
 wget --recursive --no-directories --no-clobber --directory-prefix=../data/land_surface_temperature/$year --execute robots=off --accept '*MONTHLY_DAY*.nc' --reject index,html,tmp gws-access.jasmin.ac.uk/public/esacci_lst/AQUA_MODIS_L3C/1.00/$year/$month/00/
