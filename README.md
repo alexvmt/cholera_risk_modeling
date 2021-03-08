@@ -20,11 +20,16 @@ Third, the data need to be processed to create a train and test set on district 
 Finally, the train and test set can be used to train a random forest classifier that trys to predict cholera outbreaks:
 - modeling.ipynb
 
+There is also a notebook that explores the created cholera outbreaks dataset and creates the map shown below:
+- exploratory_data_analysis.ipynb
+
+![Cholera outbreaks in India from 2010 to 2018](cholera_outbreaks_india_2010_2018.png 'Cholera outbreaks in India from 2010 to 2018')
+
 #### TODO
 
 - validate outbreaks and ecv data
 - add more comments
-- exploratory data analysis, create static and interactive maps of outbreaks
+- exploratory data analysis (e.g. create map of outbreaks)
 - improve model
 
 #### Open questions
