@@ -27,6 +27,13 @@ Finally, the train and test set can be used to train a random forest classifier 
 - exploratory data analysis, create static and interactive maps of outbreaks
 - improve model
 
+#### Open questions
+
+- Which CRS is best to use in the present case (e.g. https://epsg.io/7755)?
+- How is the buffering of geometries done in detail to calculate the areal means?
+- Which of the lag variables are used in the final model, i. e. actual lag values, rate of change and/or binary features indicating the rate of change's direction?
+- How is the number of non-outbreak data points of 8504 calculated? Intuitively I would calculate 9 years x 12 months x 40 coastal districts = 4320. I'm clearly missing something here.
+
 ## References
 
 ### Original paper
