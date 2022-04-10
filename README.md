@@ -2,9 +2,9 @@
 
 In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables (ECV) and using a random forest classifier.
 
-I focus on the years 2010 to 2018 and only on the most predictive ECV (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of data manageable (~50 GB at the moment).
+I focus on the years 2010 to 2018 and only on the most predictive ECV (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of raw data manageable (~44 GB at the moment).
 
-First, the outbreaks and ECV data need to be downloaded using the following scripts (they can be executed directly from the subsequent notebooks):
+First, the outbreaks and ECV data need to be downloaded using the following scripts:
 - Cholera outbreaks: download_cholera_outbreaks_data.py
 - Sea surface salinity: download_sea_surface_salinity_data.sh
 - Chlorophyll-a concentration: download_chlorophyll_a_concentration_data.sh
@@ -51,12 +51,12 @@ National Centre for Disease Control, Directorate General of Health Services. Int
 University of California, Berkely. Global Administrative Areas. Digital Geospatial Data. 2020. Available online: http://www.gadm.org (accessed on 28 February 2021).
 
 ### Sea surface salinity
-Reul, N.; Grodsky, S.; Arias, M.; Boutin, J.; Catany, R.; Chapron, B.; D’Amico, F.; Dinnat, E.; Donlon, C.; Fore, A.; et al. Sea surface salinity estimates from spaceborne L-band radiometers: An overview of the first decade of observation (2010–2019). Remote Sens. Environ. 2020, 242, 111769.
+Boutin, J.; Vergely, J.-L.; Reul, N.; Catany, R.; Koehler, J.; Martin, A.; Rouffi, F.; Arias, M.; Chakroun, M.; Corato, G.; Estella-Perez, V.; Guimbard, S.; Hasson, A.; Josey, S.; Khvorostyanov, D.; Kolodziejczyk, N.; Mignot, J.; Olivier, L.; Reverdin, G.; Stammer, D.; Supply, A.; Thouvenin-Masson, C.; Turiel, A.; Vialard, J.; Cipollini, P.; Donlon, C. (2021): ESA Sea Surface Salinity Climate Change Initiative (Sea_Surface_Salinity_cci): Weekly sea surface salinity product, v03.21, for 2010 to 2020. NERC EDS Centre for Environmental Data Analysis, 8 October 2021. https://catalogue.ceda.ac.uk/uuid/fad2e982a59d44788eda09e3c67ed7d5
 
 ### Chlorophyll-a concentration
-Sathyendranath, S.; Brewin, R.J.W.; Brockmann, C.; Brotas, V.; Calton, B.; Chuprin, A.; Cipollini, P.; Couto, A.B.; Dingle, J.; Doerffer, R.; et al. An Ocean-Colour Time Series for Use in Climate Studies: The Experience of the Ocean-Colour Climate Change Initiative (OC-CCI). Sensors 2019, 19, 4285.
+Sathyendranath, S.; Jackson, T.; Brockmann, C.; Brotas, V.; Calton, B.; Chuprin, A.; Clements, O.; Cipollini, P.; Danne, O.; Dingle, J.; Donlon, C.; Grant, M.; Groom, S.; Krasemann, H.; Lavender, S.; Mazeran, C.; Mélin, F.; Müller, D.; Steinmetz, F.; Valente, A.; Zühlke, M.; Feldman, G.; Franz, B.; Frouin, R.; Werdell, J.; Platt, T. (2021): ESA Ocean Colour Climate Change Initiative (Ocean_Colour_cci): Global chlorophyll-a data products gridded on a geographic projection, Version 5.0. NERC EDS Centre for Environmental Data Analysis, 12 May 2021. https://catalogue.ceda.ac.uk/uuid/e9f82908fd9c48138b31e5cfaa6d692b
 
 ### Land surface temperature
-Ghent, D.; Veal, K.; Trent, T.; Dodd, E.; Sembhi, H.; Remedios, J. A New Approach to Defining Uncertainties for MODIS Land Surface Temperature. Remote Sens. 2019, 11, 1021.
+Ghent, D.; Veal, K.; Perry, M. (2022): ESA Land Surface Temperature Climate Change Initiative (LST_cci): Multisensor Infra-Red (IR) Low Earth Orbit (LEO) land surface temperature (LST) time series level 3 supercollated (L3S) global product (1995-2020), version 2.00. NERC EDS Centre for Environmental Data Analysis, 25 February 2022. doi:10.5285/ef8ce37b6af24469a2a4bdc31d3db27d. http://dx.doi.org/10.5285/ef8ce37b6af24469a2a4bdc31d3db27d
 
-Most data on essential climate variables is available at the ESA Climate Change Initiative's [Open Data Portal](https://climate.esa.int/en/odp/#/dashboard)
+Data on essential climate variables is available at the ESA Climate Change Initiative's [Open Data Portal](https://climate.esa.int/en/odp/#/dashboard)
