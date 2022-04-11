@@ -2,26 +2,28 @@
 
 In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables (ECV) and using a random forest classifier.
 
-I focus on the years 2010 to 2018 and only on the most predictive ECV (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of raw data manageable (~44 GB at the moment).
+I focus on the years 2010 to 2018 and only on the most predictive ECV (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of raw data manageable.
 
 First, the outbreaks and ECV data need to be downloaded using the following scripts:
-- Cholera outbreaks: download_cholera_outbreaks_data.py
-- Sea surface salinity: download_sea_surface_salinity_data.sh
-- Chlorophyll-a concentration: download_chlorophyll_a_concentration_data.sh
-- Land surface temperature: download_and_preprocess_land_surface_temperature_data.py
+- Cholera outbreaks: `download_cholera_outbreaks_data.py`
+- Sea surface salinity: `download_sea_surface_salinity_data.sh`
+- Chlorophyll-a concentration: `download_chlorophyll_a_concentration_data.sh`
+- Land surface temperature: `download_and_preprocess_land_surface_temperature_data.py`
+
+The land surface temperature data need some extra preprocessing due to the daily temporal resolution and the resulting extremely large amount of data.
 
 Second, the outbreaks and ECV data need to be preprocessed using the following notebooks:
-- Cholera outbreaks: preprocess_cholera_outbreaks.ipynb
-- ECV data: preprocess_essential_climate_variables.ipynb
+- Cholera outbreaks: `preprocess_cholera_outbreaks.ipynb`
+- ECV data: `preprocess_essential_climate_variables.ipynb`
 
 Third, the data need to be processed to create a train and test set on district and month level using the following notebook:
-- create_train_and_test_set.ipynb
+- `create_train_and_test_set.ipynb`
 
 Finally, the train and test set can be used to train a random forest classifier that trys to predict cholera outbreaks:
-- modeling.ipynb
+- `modeling.ipynb`
 
 There is also a notebook that explores the created cholera outbreaks dataset and creates the map shown below:
-- exploratory_data_analysis.ipynb
+- `exploratory_data_analysis.ipynb`
 
 ![Cholera outbreaks in India from 2010 to 2018](cholera_outbreaks_india_2010_2018.png 'Cholera outbreaks in India from 2010 to 2018')
 
