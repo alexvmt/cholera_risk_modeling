@@ -8,7 +8,7 @@ First, the outbreaks and ECV data need to be downloaded using the following scri
 - Cholera outbreaks: download_cholera_outbreaks_data.py
 - Sea surface salinity: download_sea_surface_salinity_data.sh
 - Chlorophyll-a concentration: download_chlorophyll_a_concentration_data.sh
-- Land surface temperature: download_land_surface_temperature_data.sh
+- Land surface temperature: download_and_preprocess_land_surface_temperature_data.py
 
 Second, the outbreaks and ECV data need to be preprocessed using the following notebooks:
 - Cholera outbreaks: preprocess_cholera_outbreaks.ipynb
