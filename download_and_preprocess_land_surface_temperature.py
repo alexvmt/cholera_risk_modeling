@@ -1,6 +1,6 @@
 #!/bin/python
 
-# this script downloads daily day land surface temperature data from the ESA Climate Change Initiative for a given month of a given year
+# this script downloads and preprocesses daily day land surface temperature data from the ESA Climate Change Initiative for a given month of a given year
 # https://catalogue.ceda.ac.uk/uuid/ef8ce37b6af24469a2a4bdc31d3db27d
 
 # import packages
@@ -87,6 +87,6 @@ for day in days:
     ds.run()
     
     # save data
-    ds.to_nc(file_name)
+    ds.to_nc(file_name, overwrite=True)
 
 print('Download land surface temperature data for {}/{} complete.'.format(month, year))
