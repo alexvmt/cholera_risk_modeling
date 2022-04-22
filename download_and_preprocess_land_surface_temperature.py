@@ -9,6 +9,7 @@ import os
 from bs4 import BeautifulSoup
 import requests
 import nctoolkit as nc
+from time import sleep
 
 params = sys.argv
 year = params[1]
@@ -64,15 +65,21 @@ spatial_resolution = 0.05
 nc.options(lazy=True)
 
 # download and preprocess daily data
-for day in days:
+for day in days[21:]:
     
     print ('Downloading and processing day {}...'.format(day))
     
     # create file name
     file_name = 'ESACCI-LST-L3S-LST-IRCDR_-0.01deg_1DAILY_DAY-' + year + month + day + '000000-fv2.00.nc'
-    
-    # download data
-    ds = nc.open_url(url + '/' + day + '/' + file_name)
+        
+    try:
+        # download data
+        ds = nc.open_url(url + '/' + day + '/' + file_name)
+    except ValueError:
+        # try downloading data again in case it failed the first time
+        print('Download failed. Trying again...')
+        sleep(60)
+        ds = nc.open_url(url + '/' + day + '/' + file_name)
     
     # select land surface temperature variable
     ds.select(variables='lst')
