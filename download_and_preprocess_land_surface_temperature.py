@@ -65,7 +65,7 @@ spatial_resolution = 0.05
 nc.options(lazy=True)
 
 # download and preprocess daily data
-for day in days[21:]:
+for day in days:
     
     print ('Downloading and processing day {}...'.format(day))
     
