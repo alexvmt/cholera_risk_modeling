@@ -19,19 +19,26 @@ Second, the outbreaks and ECV data need to be preprocessed using the following n
 Third, the data need to be processed to create a train and test set on district and month level using the following notebook:
 - `create_train_and_test_set.ipynb`
 
-Finally, the train and test set can be used to train a random forest classifier that trys to predict cholera outbreaks:
+Finally, the train and test set can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECV:
 - `modeling.ipynb`
 
-There is also a notebook that explores the created cholera outbreaks dataset and creates the map shown below:
+There is also a notebook that explores the created cholera outbreaks dataset and ECVs and creates the maps shown below:
 - `exploratory_data_analysis.ipynb`
 
 ![Cholera outbreaks in India from 2010 to 2018](cholera_outbreaks_india_2010_2018.png 'Cholera outbreaks in India from 2010 to 2018')
 
-#### TODO
+![Sea surface salinity 2018](sss_2018.png 'Sea surface salinity 2018')
 
-- validate outbreaks and ecv data
-- add more comments
-- exploratory data analysis (e.g. create map of outbreaks)
+![Chlorophyll-a concentration 2018](chlora_2018.png 'Chlorophyll-a concentration 2018')
+
+![Land surface temperature 2018](lst_2018.png 'Land surface temperature 2018')
+
+#### To do
+
+- validate cholera outbreaks and ecv data
+- figure out why some cholera outbreaks are missing
+- figure out why there are some chlor-a data points at unexpected geographic locations
+- extend exploratory data analysis
 - improve model
 
 #### Open questions
