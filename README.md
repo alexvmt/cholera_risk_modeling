@@ -2,36 +2,40 @@
 
 In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables (ECV) and using a random forest classifier.
 
-I focus on the years 2010 to 2018 and only on the most predictive ECV (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of raw data manageable.
+I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of raw data manageable.
 
-First, the outbreaks and ECV data need to be downloaded using the following scripts:
+First, the cholera outbreaks and ECV data need to be downloaded using the following scripts:
 - Cholera outbreaks: `download_cholera_outbreaks_data.py`
 - Sea surface salinity: `download_sea_surface_salinity_data.sh`
 - Chlorophyll-a concentration: `download_chlorophyll_a_concentration_data.sh`
 - Land surface temperature: `download_and_preprocess_land_surface_temperature_data.py`
 
-The land surface temperature data need some extra preprocessing due to the daily temporal resolution and the resulting extremely large amount of data.
+The land surface temperature data need some extra preprocessing due to their daily temporal resolution and the resulting extremely large amount of data.
 
-Second, the outbreaks and ECV data need to be preprocessed using the following notebooks:
+Second, the cholera outbreaks and ECV data need to be preprocessed using the following notebooks:
 - Cholera outbreaks: `preprocess_cholera_outbreaks.ipynb`
-- ECV data: `preprocess_essential_climate_variables.ipynb`
+- ECVs: `preprocess_essential_climate_variables.ipynb`
 
-Third, the data need to be processed to create a train and test set on district and month level using the following notebook:
+Third, the data need to be further processed to create train and test sets on district and month level using the following notebook:
 - `create_train_and_test_set.ipynb`
 
-Finally, the train and test set can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECV:
+Finally, the train and test sets can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECVs:
 - `modeling.ipynb`
 
 There is also a notebook that explores the created cholera outbreaks dataset and ECVs and creates the maps shown below:
 - `exploratory_data_analysis.ipynb`
 
-![Cholera outbreaks in India from 2010 to 2018](cholera_outbreaks_india_2010_2018.png 'Cholera outbreaks in India from 2010 to 2018')
+### Cholera outbreaks in India from 2010 to 2018 by district
+<img src="images/cholera_outbreaks_india_2010_2018.png" style="max-width:100%;height:auto" />
 
-![Sea surface salinity 2018](sss_2018.png 'Sea surface salinity 2018')
+### Mean sea surface salinity January, April, July and October 2018
+<img src="images/sss_2018.png" style="max-width:100%;height:auto" />
 
-![Chlorophyll-a concentration 2018](chlora_2018.png 'Chlorophyll-a concentration 2018')
+### Mean chlorophyll-a concentration January, April, July and October 2018
+<img src="images/chlora_2018.png" style="max-width:100%;height:auto" />
 
-![Land surface temperature 2018](lst_2018.png 'Land surface temperature 2018')
+### Mean land surface temperature  January, April, July and October 2018
+<img src="images/lst_2018.png" style="max-width:100%;height:auto" />
 
 #### To do
 
@@ -68,4 +72,4 @@ Sathyendranath, S.; Jackson, T.; Brockmann, C.; Brotas, V.; Calton, B.; Chuprin,
 ### Land surface temperature
 Ghent, D.; Veal, K.; Perry, M. (2022): ESA Land Surface Temperature Climate Change Initiative (LST_cci): Multisensor Infra-Red (IR) Low Earth Orbit (LEO) land surface temperature (LST) time series level 3 supercollated (L3S) global product (1995-2020), version 2.00. NERC EDS Centre for Environmental Data Analysis, 25 February 2022. doi:10.5285/ef8ce37b6af24469a2a4bdc31d3db27d. http://dx.doi.org/10.5285/ef8ce37b6af24469a2a4bdc31d3db27d
 
-Data on essential climate variables is available at the ESA Climate Change Initiative's [Open Data Portal](https://climate.esa.int/en/odp/#/dashboard)
+Data on essential climate variables is available in the ESA Climate Change Initiative's [Open Data Portal](https://climate.esa.int/en/odp/#/dashboard)
