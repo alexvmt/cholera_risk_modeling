@@ -22,20 +22,20 @@ Third, the data need to be further processed to create train and test sets on di
 Finally, the train and test sets can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECVs:
 - `modeling.ipynb`
 
-There is also a notebook that explores the created cholera outbreaks dataset and ECVs and creates the maps shown below:
+There is also a notebook that explores and validates the created cholera outbreaks dataset and ECVs and creates the maps shown below:
 - `exploratory_data_analysis.ipynb`
 
-### Cholera outbreaks in India from 2010 to 2018 by district
-<img src="images/cholera_outbreaks_india_2010_2018.png" style="max-width:100%;height:auto" />
+### Cholera outbreaks in India by district (2010 to 2018)
+![Cholera outbreaks in India by district (2010 to 2018)](images/cholera_outbreaks_india_district_2010_2018.png 'Cholera outbreaks in India by district (2010 to 2018)')
 
 ### Mean sea surface salinity January, April, July and October 2018
-<img src="images/sss_2018.png" style="max-width:100%;height:auto" />
+![Sea surface salinity 2018](images/sss_2018.png 'Sea surface salinity 2018')
 
 ### Mean chlorophyll-a concentration January, April, July and October 2018
-<img src="images/chlora_2018.png" style="max-width:100%;height:auto" />
+![Chlorophyll-a concentration 2018](images/chlora_2018.png 'Chlorophyll-a concentration 2018')
 
-### Mean land surface temperature  January, April, July and October 2018
-<img src="images/lst_2018.png" style="max-width:100%;height:auto" />
+### Mean land surface temperature January, April, July and October 2018
+![Land surface temperature 2018](images/lst_2018.png 'Land surface temperature 2018')
 
 #### To do
 
@@ -48,9 +48,8 @@ There is also a notebook that explores the created cholera outbreaks dataset and
 #### Open questions
 
 - Which CRS is best to use in the present case (e.g. https://epsg.io/7755)?
-- How is the buffering of geometries done in detail to calculate the areal means?
-- Which of the lag variables are used in the final model, i. e. actual lag values, rate of change and/or binary features indicating the rate of change's direction?
 - How is the number of non-outbreak data points of 8504 calculated? Intuitively I would calculate 9 years x 12 months x 40 coastal districts = 4320. I'm clearly missing something here.
+- Which of the lag variables are used in the final model, i. e. actual lag values, rate of change and/or binary features indicating the rate of change's direction?
 
 ## References
 
