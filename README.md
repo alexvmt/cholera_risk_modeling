@@ -41,13 +41,14 @@ There is also a notebook that explores and validates the created cholera outbrea
 
 - validate cholera outbreaks and ecv data
 - figure out why some cholera outbreaks are missing
-- figure out why there are some chlor-a data points at unexpected geographic locations
-- extend exploratory data analysis
+- figure out why there are some chlor-a data points at unexpected locations on land
 - improve model
 
 #### Open questions
 
-- Which CRS is best to use in the present case (e.g. https://epsg.io/7755)?
+- Which local CRS is best to use (e.g. https://epsg.io/7755)?
+- How exactly is the buffering done?
+- How exactly are the areal means of terrestrial and oceanic variables computed?
 - How is the number of non-outbreak data points of 8504 calculated? Intuitively I would calculate 9 years x 12 months x 40 coastal districts = 4320. I'm clearly missing something here.
 - Which of the lag variables are used in the final model, i. e. actual lag values, rate of change and/or binary features indicating the rate of change's direction?
 
