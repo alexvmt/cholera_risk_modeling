@@ -1,6 +1,6 @@
 # Cholera risk modeling using essential climate variables and machine learning
 
-In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables (ECV) and using a random forest classifier.
+In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables (ECVs) and using a random forest classifier.
 
 I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of raw data manageable.
 
@@ -12,17 +12,14 @@ First, the cholera outbreaks and ECV data need to be downloaded using the follow
 
 The land surface temperature data need some extra preprocessing due to their daily temporal resolution and the resulting extremely large amount of data.
 
-Second, the cholera outbreaks and ECV data need to be preprocessed using the following notebooks:
-- Cholera outbreaks: `preprocess_cholera_outbreaks.ipynb`
+Second, the cholera outbreaks and ECV data need to be preprocessed using the following script and notebooks:
+- Cholera outbreaks:  `convert_cholera_outbreaks_from_pdf_to_text.sh` and `preprocess_cholera_outbreaks.ipynb`
 - ECVs: `preprocess_essential_climate_variables.ipynb`
 
 Third, the data need to be further processed to create train and test sets on district and month level using the following notebook:
 - `create_train_and_test_set.ipynb`
 
-Finally, the train and test sets can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECVs:
-- `modeling.ipynb`
-
-There is also a notebook that explores and validates the created cholera outbreaks dataset and ECVs and creates the maps shown below:
+The following notebook explores and validates the created cholera outbreaks dataset and ECV data and creates the maps shown below:
 - `exploratory_data_analysis.ipynb`
 
 ### Cholera outbreaks in India by district (2010 to 2018)
@@ -37,12 +34,15 @@ There is also a notebook that explores and validates the created cholera outbrea
 ### Mean land surface temperature January, April, July and October 2018
 ![Land surface temperature 2018](images/lst_2018.png 'Land surface temperature 2018')
 
+Finally, the train and test sets can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECV data:
+- `modeling.ipynb`
+
 #### To do
 
 - validate cholera outbreaks and ecv data
 - figure out why some cholera outbreaks are missing
 - figure out why there are some chlor-a data points at unexpected locations on land
-- improve model
+- improve and extend modeling
 
 #### Open questions
 
