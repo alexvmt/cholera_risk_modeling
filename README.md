@@ -4,7 +4,21 @@ In this project I replicate parts of Campbell et al. (2020), relating cholera ri
 
 I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. sea surface salinity, chlorophyll-a concentration and land surface temperature), as indicated by Campbell et al. (2020), to keep the amount of raw data manageable.
 
-First, the cholera outbreaks and ECV data need to be downloaded using the following scripts:
+**Contents**
+
+- [Getting the data](#getting-the-data)
+- [Preprocessing the data](#preprocessing-the-data)
+- [Sampling train and test sets](#sampling-train-and-test-sets)
+- [Exploratory data analysis and validation](#exploratory-data-analysis-and-validation)
+- [Modeling](#modeling)
+- [Open tasks and questions](#open-tasks-and-questions)
+- [References](#references)
+
+
+
+## Getting the data
+
+First, the cholera outbreaks and ECVs need to be downloaded using the following scripts:
 - Cholera outbreaks: `download_cholera_outbreaks_data.py`
 - Sea surface salinity: `download_sea_surface_salinity_data.sh`
 - Chlorophyll-a concentration: `download_chlorophyll_a_concentration_data.sh`
@@ -12,14 +26,26 @@ First, the cholera outbreaks and ECV data need to be downloaded using the follow
 
 The land surface temperature data need some extra preprocessing due to their daily temporal resolution and the resulting extremely large amount of data.
 
-Second, the cholera outbreaks and ECV data need to be preprocessed using the following script and notebooks:
+
+
+## Preprocessing the data
+
+Second, the cholera outbreaks and ECVs need to be preprocessed using the following script and notebooks:
 - Cholera outbreaks:  `convert_cholera_outbreaks_from_pdf_to_text.sh` and `preprocess_cholera_outbreaks.ipynb`
 - ECVs: `preprocess_essential_climate_variables.ipynb`
 
-Third, the data need to be further processed to create train and test sets on district and month level using the following notebook:
+
+
+## Sampling train and test sets
+
+Third, the cholera outbreaks and ECVs need to be further processed to create train and test sets on district and month level using the following notebook:
 - `create_train_and_test_set.ipynb`
 
-The following notebook explores and validates the created cholera outbreaks dataset and ECV data and creates the maps shown below:
+
+
+## Exploratory data analysis and validation
+
+The following notebook explores and validates the created cholera outbreaks dataset and ECVs and creates the maps shown below:
 - `exploratory_data_analysis.ipynb`
 
 ### Cholera outbreaks in India by district (2010 to 2018)
@@ -34,23 +60,33 @@ The following notebook explores and validates the created cholera outbreaks data
 ### Mean land surface temperature January, April, July and October 2018
 ![Land surface temperature 2018](images/lst_2018.png 'Land surface temperature 2018')
 
-Finally, the train and test sets can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECV data:
+
+
+## Modeling
+
+Finally, the sampled data can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECV features:
 - `modeling.ipynb`
 
-#### To do
 
-- validate cholera outbreaks and ecv data
+
+## Open tasks and questions
+
+### Open tasks
+
+- validate cholera outbreaks and ECVs
 - figure out why some cholera outbreaks are missing
 - figure out why there are some chlor-a data points at unexpected locations on land
 - improve and extend modeling
 
-#### Open questions
+### Open questions
 
 - Which local CRS is best to use (e.g. https://epsg.io/7755)?
 - How exactly is the buffering done?
 - How exactly are the areal means of terrestrial and oceanic variables computed?
 - How is the number of non-outbreak data points of 8504 calculated? Intuitively I would calculate 9 years x 12 months x 40 coastal districts = 4320. I'm clearly missing something here.
 - Which of the lag variables are used in the final model, i. e. actual lag values, rate of change and/or binary features indicating the rate of change's direction?
+
+
 
 ## References
 
