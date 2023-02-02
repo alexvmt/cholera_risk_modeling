@@ -18,10 +18,10 @@ month = params[2]
 print(f'Download land surface temperature data for {month}/{year}...')
 
 # create data directory if it doesn't yet exist
-if not os.path.exists('../data'):
-    os.mkdir('../data')
+if not os.path.exists('../../data'):
+    os.mkdir('../../data')
 
-os.chdir('../data')
+os.chdir('../../data')
 
 # create land surface temperature directory if it doesn't yet exist
 if not os.path.exists('land_surface_temperature'):

@@ -6,24 +6,24 @@
 echo 'Download chlorophyll-a concentration data...'
 
 # create data directory if it doesn't yet exist
-if [ ! -d ../data ]; then
-  mkdir -p ../data;
+if [ ! -d ../../data ]; then
+  mkdir -p ../../data;
 fi
 
 # create chlorophyll-a concentration directory if it doesn't yet exist
-if [ ! -d ../data/chlorophyll_a_concentration ]; then
-  mkdir -p ../data/chlorophyll_a_concentration;
+if [ ! -d ../../data/chlorophyll_a_concentration ]; then
+  mkdir -p ../../data/chlorophyll_a_concentration;
 fi
 
 # create directories for years if they don't yet exist
 for year in {2010..2018}
 do
-if [ ! -d ../data/chlorophyll_a_concentration/$year ]; then
-  mkdir -p ../data/chlorophyll_a_concentration/$year;
+if [ ! -d ../../data/chlorophyll_a_concentration/$year ]; then
+  mkdir -p ../../data/chlorophyll_a_concentration/$year;
 fi
 
 # download data
-wget --recursive --no-directories --no-clobber --directory-prefix=../data/chlorophyll_a_concentration/$year ftp://anon-ftp.ceda.ac.uk/neodc/esacci/ocean_colour/data/v5.0-release/geographic/netcdf/chlor_a/monthly/v5.0/$year
+wget --recursive --no-directories --no-clobber --directory-prefix=../../data/chlorophyll_a_concentration/$year ftp://anon-ftp.ceda.ac.uk/neodc/esacci/ocean_colour/data/v5.0-release/geographic/netcdf/chlor_a/monthly/v5.0/$year
 
 done
 wait

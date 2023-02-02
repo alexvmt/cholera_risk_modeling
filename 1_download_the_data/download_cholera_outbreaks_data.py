@@ -12,10 +12,10 @@ import requests
 import urllib3
 
 # create data directory if it doesn't yet exist
-if not os.path.exists('../data'):
-    os.mkdir('../data')
+if not os.path.exists('../../data'):
+    os.mkdir('../../data')
 
-os.chdir('../data')
+os.chdir('../../data')
 
 # create cholera outbreaks directory if it doesn't yet exist
 if not os.path.exists('cholera_outbreaks'):
