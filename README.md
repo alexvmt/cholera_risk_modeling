@@ -50,16 +50,16 @@ The following notebook explores and validates the created cholera outbreaks data
 - `exploratory_data_analysis_and_validation.ipynb`
 
 ### Cholera outbreaks in India by district (2010 to 2018)
-![Cholera outbreaks in India by district (2010 to 2018)](images/cholera_outbreaks_india_district_2010_2018.png 'Cholera outbreaks in India by district (2010 to 2018)')
+![Cholera outbreaks in India by district (2010 to 2018)](0_images/cholera_outbreaks_india_district_2010_2018.png 'Cholera outbreaks in India by district (2010 to 2018)')
 
 ### Mean sea surface salinity January, April, July and October 2018
-![Sea surface salinity 2018](images/sss_2018.png 'Sea surface salinity 2018')
+![Sea surface salinity 2018](0_images/sss_2018.png 'Sea surface salinity 2018')
 
 ### Mean chlorophyll-a concentration January, April, July and October 2018
-![Chlorophyll-a concentration 2018](images/chlora_2018.png 'Chlorophyll-a concentration 2018')
+![Chlorophyll-a concentration 2018](0_images/chlora_2018.png 'Chlorophyll-a concentration 2018')
 
 ### Mean land surface temperature January, April, July and October 2018
-![Land surface temperature 2018](images/lst_2018.png 'Land surface temperature 2018')
+![Land surface temperature 2018](0_images/lst_2018.png 'Land surface temperature 2018')
 
 
 
