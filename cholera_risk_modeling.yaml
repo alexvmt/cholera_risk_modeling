@@ -1,0 +1,20 @@
+name: cholera_risk_modeling
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.8
+  - bs4
+  - nctoolkit
+  - glob2
+  - xarray
+  - pyproj
+  - scikit-learn
+  - imbalanced-learn
+  - pandas
+  - matplotlib
+  - geopandas
+  - ipywidgets
+  - jupyterlab
+  - camelot-py

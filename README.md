@@ -6,17 +6,18 @@ I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. se
 
 **Contents**
 
-- [Getting the data](#getting-the-data)
-- [Preprocessing the data](#preprocessing-the-data)
-- [Sampling train and test sets](#sampling-train-and-test-sets)
+- [Download the data](#download-the-data)
+- [Preprocess the data](#preprocess-the-data)
+- [Create train and test set](#create-train-and-test-set)
 - [Exploratory data analysis and validation](#exploratory-data-analysis-and-validation)
 - [Modeling](#modeling)
 - [Open tasks and questions](#open-tasks-and-questions)
+- [Requirements](#requirements)
 - [References](#references)
 
 
 
-## Getting the data
+## Download the data
 
 First, the cholera outbreaks and ECVs need to be downloaded using the following scripts:
 - Cholera outbreaks: `download_cholera_outbreaks_data.py`
@@ -28,7 +29,7 @@ The land surface temperature data need some extra preprocessing due to their dai
 
 
 
-## Preprocessing the data
+## Preprocess the data
 
 Second, the cholera outbreaks and ECVs need to be preprocessed using the following script and notebooks:
 - Cholera outbreaks:  `convert_cholera_outbreaks_from_pdf_to_text.sh` and `preprocess_cholera_outbreaks.ipynb`
@@ -36,7 +37,7 @@ Second, the cholera outbreaks and ECVs need to be preprocessed using the followi
 
 
 
-## Sampling train and test sets
+## Create train and test set
 
 Third, the cholera outbreaks and ECVs need to be further processed to create train and test sets on district and month level using the following notebook:
 - `create_train_and_test_set.ipynb`
@@ -46,7 +47,7 @@ Third, the cholera outbreaks and ECVs need to be further processed to create tra
 ## Exploratory data analysis and validation
 
 The following notebook explores and validates the created cholera outbreaks dataset and ECVs and creates the maps shown below:
-- `exploratory_data_analysis.ipynb`
+- `exploratory_data_analysis_and_validation.ipynb`
 
 ### Cholera outbreaks in India by district (2010 to 2018)
 ![Cholera outbreaks in India by district (2010 to 2018)](images/cholera_outbreaks_india_district_2010_2018.png 'Cholera outbreaks in India by district (2010 to 2018)')
@@ -85,6 +86,16 @@ Finally, the sampled data can be used to train a random forest classifier that t
 - How exactly are the areal means of terrestrial and oceanic variables computed?
 - How is the number of non-outbreak data points of 8504 calculated? Intuitively I would calculate 9 years x 12 months x 40 coastal districts = 4320. I'm clearly missing something here.
 - Which of the lag variables are used in the final model, i. e. actual lag values, rate of change and/or binary features indicating the rate of change's direction?
+
+
+
+## Requirements
+
+Assuming `conda` is installed, run the following commands in your terminal to run the scripts and notebooks in this repository:
+
+- create environment: `conda env create --file=cholera_risk_modeling.yaml`
+- activate environment: `conda activate cholera_risk_modeling`
+- you might need to do the following in addition: `pip install ghostscript`
 
 
 
