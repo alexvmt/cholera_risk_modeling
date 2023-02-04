@@ -1,8 +1,8 @@
 #!/bin/python
 
-# this script downloads cholera outbreaks PDF files from the Integrated Disease Surveillance Programme (IDSP) for 2010 to 2018
+# this script downloads outbreaks PDF files from the Integrated Disease Surveillance Programme (IDSP) for 2010 to 2018
 
-print('Download cholera outbreaks data...')
+print('Download outbreaks...')
 
 # import packages
 import os
@@ -17,11 +17,11 @@ if not os.path.exists('../../data'):
 
 os.chdir('../../data')
 
-# create cholera outbreaks directory if it doesn't yet exist
-if not os.path.exists('cholera_outbreaks'):
-    os.mkdir('cholera_outbreaks')
+# create outbreaks directory if it doesn't yet exist
+if not os.path.exists('outbreaks'):
+    os.mkdir('outbreaks')
 
-os.chdir('cholera_outbreaks')
+os.chdir('outbreaks')
 
 # create directories for years if they don't yet exist
 years = list(np.arange(2010, 2019))
@@ -51,7 +51,7 @@ rows = table.find_all(lambda tag: tag.name=='tr')
 # relevant rows for 2010 to 2018
 relevant_rows = [13, 12, 11, 10, 9, 8, 7, 6, 5]
 
-# download cholera outbreaks PDF files
+# download outbreaks PDF files
 for row in relevant_rows:
     
     # get year and number of files in row
@@ -100,4 +100,4 @@ for row in relevant_rows:
             with open(year+'/'+file_name, 'wb') as f:
                 f.write(r.content)
 
-print('Download cholera outbreaks data complete.')
+print('Download outbreaks complete.')
