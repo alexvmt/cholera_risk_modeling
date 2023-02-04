@@ -19,8 +19,8 @@ I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. se
 
 ## Download the data
 
-First, the cholera outbreaks and ECVs need to be downloaded using the following scripts:
-- Cholera outbreaks: `download_cholera_outbreaks_data.py`
+First, outbreaks and ECVs need to be downloaded using the following scripts:
+- Outbreaks: `download_outbreaks.py`
 - Sea surface salinity: `download_sea_surface_salinity_data.sh`
 - Chlorophyll-a concentration: `download_chlorophyll_a_concentration_data.sh`
 - Land surface temperature: `download_and_preprocess_land_surface_temperature_data.py`
@@ -31,22 +31,22 @@ The land surface temperature data need some extra preprocessing due to their dai
 
 ## Preprocess the data
 
-Second, the cholera outbreaks and ECVs need to be preprocessed using the following script and notebooks:
-- Cholera outbreaks:  `convert_cholera_outbreaks_from_pdf_to_text.sh` and `preprocess_cholera_outbreaks.ipynb`
+Second, outbreaks and ECVs need to be preprocessed using the following script and notebooks:
+- Outbreaks:  `extract_and_clean_tables_from_pdf_files.py` and `preprocess_outbreaks.ipynb`
 - ECVs: `preprocess_essential_climate_variables.ipynb`
 
 
 
 ## Create train and test set
 
-Third, the cholera outbreaks and ECVs need to be further processed to create train and test sets on district and month level using the following notebook:
+Third, the preprocessed cholera outbreaks and ECVs need to be further processed to create a train and a test set on district and month level using the following notebook:
 - `create_train_and_test_set.ipynb`
 
 
 
 ## Exploratory data analysis and validation
 
-The following notebook explores and validates the created cholera outbreaks dataset and ECVs and creates the maps shown below:
+The following notebook explores and validates the extracted cholera outbreaks and ECVs and creates the maps shown below:
 - `exploratory_data_analysis_and_validation.ipynb`
 
 ### Cholera outbreaks in India by district (2010 to 2018)
@@ -74,7 +74,7 @@ Finally, the sampled data can be used to train a random forest classifier that t
 
 ### Open tasks
 
-- validate cholera outbreaks and ECVs
+- validate extracted cholera outbreaks and ECVs
 - figure out why some cholera outbreaks are missing
 - figure out why there are some chlor-a data points at unexpected locations on land
 - improve and extend modeling
@@ -97,6 +97,8 @@ Assuming `conda` is installed, run the following commands in your terminal to ru
 - activate environment: `conda activate cholera_risk_modeling`
 - you might need to do the following in addition: `pip install ghostscript`
 
+Run the scripts and notebooks directly in their respective directory.
+
 
 
 ## References
@@ -104,7 +106,7 @@ Assuming `conda` is installed, run the following commands in your terminal to ru
 ### Original paper
 Campbell AM, Racault M-F, Goult S, Laurenson A. Cholera Risk: A Machine Learning Approach Applied to Essential Climate Variables. International Journal of Environmental Research and Public Health. 2020; 17(24):9378. https://doi.org/10.3390/ijerph17249378 
 
-### Cholera outbreaks
+### Outbreaks
 National Centre for Disease Control, Directorate General of Health Services. Integrated Disease Surveillance Programme. Available online: http://idsp.nic.in/ (accessed on 28 February 2021).
 
 ### Level 2 administrative zones for India
