@@ -8,8 +8,8 @@ I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. se
 
 - [Download the data](#download-the-data)
 - [Preprocess the data](#preprocess-the-data)
-- [Create train and test set](#create-train-and-test-set)
 - [Exploratory data analysis and validation](#exploratory-data-analysis-and-validation)
+- [Create train and test set](#create-train-and-test-set)
 - [Modeling](#modeling)
 - [Open tasks and questions](#open-tasks-and-questions)
 - [Requirements](#requirements)
@@ -19,7 +19,7 @@ I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. se
 
 ## Download the data
 
-First, outbreaks and ECVs need to be downloaded using the following scripts:
+First, outbreaks and ECVs need to be downloaded:
 - Outbreaks: `download_outbreaks.py`
 - Sea surface salinity: `download_sea_surface_salinity_data.sh`
 - Chlorophyll-a concentration: `download_chlorophyll_a_concentration_data.sh`
@@ -31,55 +31,46 @@ The land surface temperature data need some extra preprocessing due to their dai
 
 ## Preprocess the data
 
-Second, outbreaks and ECVs need to be preprocessed using the following script and notebooks:
+Second, downloaded outbreaks and ECVs need to be preprocessed:
 - Outbreaks:  `extract_and_clean_tables_from_pdf_files.py` and `preprocess_outbreaks.ipynb`
 - ECVs: `preprocess_essential_climate_variables.ipynb`
 
 
 
-## Create train and test set
-
-Third, the preprocessed cholera outbreaks and ECVs need to be further processed to create a train and a test set on district and month level using the following notebook:
-- `create_train_and_test_set.ipynb`
-
-
-
 ## Exploratory data analysis and validation
 
-The following notebook explores and validates the extracted cholera outbreaks and ECVs and creates the maps shown below:
+Third, preprocessed cholera outbreaks and ECVs need to be explored and validated:
 - `exploratory_data_analysis_and_validation.ipynb`
 
 ### Cholera outbreaks in India by district (2010 to 2018)
 ![Cholera outbreaks in India by district (2010 to 2018)](0_images/cholera_outbreaks_india_district_2010_2018.png 'Cholera outbreaks in India by district (2010 to 2018)')
 
 ### Mean sea surface salinity January, April, July and October 2018
-![Sea surface salinity 2018](0_images/sss_2018.png 'Sea surface salinity 2018')
+![Mean sea surface salinity 2018](0_images/mean_sss_2018.png 'Mean sea surface salinity 2018')
 
 ### Mean chlorophyll-a concentration January, April, July and October 2018
-![Chlorophyll-a concentration 2018](0_images/chlora_2018.png 'Chlorophyll-a concentration 2018')
+![Mean chlorophyll-a concentration 2018](0_images/mean_chlora_2018.png 'Mean chlorophyll-a concentration 2018')
 
 ### Mean land surface temperature January, April, July and October 2018
-![Land surface temperature 2018](0_images/lst_2018.png 'Land surface temperature 2018')
+![Mean land surface temperature 2018](0_images/mean_lst_2018.png 'Mean land surface temperature 2018')
+
+
+
+## Create train and test set
+
+Fourth, validated cholera outbreaks and ECVs need to be merged to create a train and a test set on district and month level:
+- `create_train_and_test_set.ipynb`
 
 
 
 ## Modeling
 
-Finally, the sampled data can be used to train a random forest classifier that tries to predict cholera outbreaks based on ECV features:
+Finally, a random forest classifier is trained to predict cholera outbreaks based on a range of ECV features:
 - `modeling.ipynb`
 
 
 
-## Open tasks and questions
-
-### Open tasks
-
-- validate extracted cholera outbreaks and ECVs
-- figure out why some cholera outbreaks are missing
-- figure out why there are some chlor-a data points at unexpected locations on land
-- improve and extend modeling
-
-### Open questions
+## Open questions
 
 - Which local CRS is best to use (e.g. https://epsg.io/7755)?
 - How exactly is the buffering done?
