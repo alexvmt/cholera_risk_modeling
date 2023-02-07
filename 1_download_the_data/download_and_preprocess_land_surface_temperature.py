@@ -36,7 +36,7 @@ if not os.path.exists(year):
 os.chdir(year)
 
 # create url
-url = 'http://dap.ceda.ac.uk/thredds/fileServer/neodc/esacci/land_surface_temperature/data/MULTISENSOR_IRCDR/L3S/0.01/v2.00/daily/' + year + '/' + month
+url = f'http://dap.ceda.ac.uk/thredds/fileServer/neodc/esacci/land_surface_temperature/data/MULTISENSOR_IRCDR/L3S/0.01/v2.00/daily/'{year}'/'{month}
 
 # get page
 page = requests.get(url, verify=False).text
@@ -70,16 +70,16 @@ for day in days:
     print (f'Downloading and processing day {day}...')
     
     # create file name
-    file_name = 'ESACCI-LST-L3S-LST-IRCDR_-0.01deg_1DAILY_DAY-' + year + month + day + '000000-fv2.00.nc'
+    file_name = f'ESACCI-LST-L3S-LST-IRCDR_-0.01deg_1DAILY_DAY-'{year}{month}{day}'000000-fv2.00.nc'
         
     try:
         # download data
-        ds = nc.open_url(url + '/' + day + '/' + file_name)
+        ds = nc.open_url(f'{url}/{day}/{file_name}')
     except ValueError:
         # try downloading data again in case it failed the first time
         print('Download failed. Trying again...')
         sleep(60)
-        ds = nc.open_url(url + '/' + day + '/' + file_name)
+        ds = nc.open_url(f'{url}/{day}/{file_name}')
     
     # select land surface temperature variable
     ds.select(variables='lst')

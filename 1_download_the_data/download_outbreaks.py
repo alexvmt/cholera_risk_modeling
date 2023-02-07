@@ -70,7 +70,7 @@ for row in relevant_rows:
         week = rows[row].find_all('a')[file_number].text
         
         # make file name from week, year and extension
-        file_name = week + '_' + year + '.' + ext
+        file_name = f'{week}_{year}.{ext}'
         
         # skip file if it already exists
         if file_name in files_in_directory:
@@ -79,25 +79,25 @@ for row in relevant_rows:
         # the links to some files seem to be broken, so these files need to be downloaded manually
         elif file_name == '52nd_2011.pdf':
             r = requests.get('https://www.idsp.nic.in/WriteReadData/DOB2011/52nd_wk11_u.pdf', verify=False)
-            with open(year+'/'+file_name, 'wb') as f:
+            with open(f'{year}/{file_name}', 'wb') as f:
                 f.write(r.content)
         elif file_name == '9th_2013.pdf':
             r = requests.get('https://www.idsp.nic.in/WriteReadData/DOB2013/9th_wk13.pdf', verify=False)
-            with open(year+'/'+file_name, 'wb') as f:
+            with open(f'{year}/{file_name}', 'wb') as f:
                 f.write(r.content)
         elif file_name == '15th_2016.pdf':
             r = requests.get('https://www.idsp.nic.in/WriteReadData/l892s/25655158311465983344.pdf', verify=False)
-            with open(year+'/'+file_name, 'wb') as f:
+            with open(f'{year}/{file_name}', 'wb') as f:
                 f.write(r.content)
         elif file_name == '4th_2017.pdf':
             r = requests.get('https://www.idsp.nic.in/WriteReadData/l892s/15366628751488435411.pdf', verify=False)
-            with open(year+'/'+file_name, 'wb') as f:
+            with open(f'{year}/{file_name}', 'wb') as f:
                 f.write(r.content)
                 
         # download file and save it in the respective directory
         else:
             r = requests.get(file, verify=False)
-            with open(year+'/'+file_name, 'wb') as f:
+            with open(f'{year}/{file_name}', 'wb') as f:
                 f.write(r.content)
 
 print('Download outbreaks complete.')
