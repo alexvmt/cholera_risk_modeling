@@ -21,9 +21,9 @@ I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. se
 
 First, outbreaks and ECVs need to be downloaded:
 - Outbreaks: `download_outbreaks.py`
-- Sea surface salinity: `download_sea_surface_salinity_data.sh`
-- Chlorophyll-a concentration: `download_chlorophyll_a_concentration_data.sh`
-- Land surface temperature: `download_and_preprocess_land_surface_temperature_data.py`
+- Sea surface salinity: `download_sea_surface_salinity.sh`
+- Chlorophyll-a concentration: `download_chlorophyll_a_concentration.sh`
+- Land surface temperature: `download_and_preprocess_land_surface_temperature.py`
 
 The land surface temperature data need some extra preprocessing due to their daily temporal resolution and the resulting extremely large amount of data.
 
@@ -32,7 +32,7 @@ The land surface temperature data need some extra preprocessing due to their dai
 ## Preprocess the data
 
 Second, downloaded outbreaks and ECVs need to be preprocessed:
-- Outbreaks:  `extract_and_clean_tables_from_pdf_files.py` and `preprocess_outbreaks.ipynb`
+- Outbreaks:  `extract_and_clean_cholera_outbreaks.py` and `preprocess_cholera_outbreaks.ipynb`
 - ECVs: `preprocess_essential_climate_variables.ipynb`
 
 
