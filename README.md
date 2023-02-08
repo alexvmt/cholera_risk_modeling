@@ -11,7 +11,7 @@ I focus on the years 2010 to 2018 and only on the most predictive ECVs (i. e. se
 - [Exploratory data analysis and validation](#exploratory-data-analysis-and-validation)
 - [Create train and test set](#create-train-and-test-set)
 - [Modeling](#modeling)
-- [Open tasks and questions](#open-tasks-and-questions)
+- [Open questions](#open-questions)
 - [Requirements](#requirements)
 - [References](#references)
 
