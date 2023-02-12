@@ -14,7 +14,9 @@ dependencies:
   - imbalanced-learn
   - pandas
   - matplotlib
+  - seaborn
   - geopandas
+  - geopy
   - ipywidgets
   - jupyterlab
   - camelot-py
