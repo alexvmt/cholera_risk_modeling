@@ -32,7 +32,7 @@ The land surface temperature data need some extra preprocessing due to their dai
 ## Preprocess the data
 
 Second, downloaded outbreaks and ECVs need to be preprocessed:
-- Outbreaks: `extract_and_clean_cholera_outbreaks.py` and `preprocess_cholera_outbreaks.ipynb` *(currently still working on this because it's so tricky to properly extract data from pdf files; target variable is currently still faulty and so modelling is also not worling properly)*
+- Outbreaks: `extract_and_clean_cholera_outbreaks.py` and `preprocess_cholera_outbreaks.ipynb` *(I'm currently still working on this because it's so tricky to correctly extract data from pdf files; the target variable is thus still faulty and so modelling is also not working properly.)*
 - ECVs: `preprocess_essential_climate_variables.ipynb`
 
 
