@@ -1,4 +1,4 @@
-# Cholera risk modeling using essential climate variables and machine learning
+# Cholera risk modeling using essential climate variables and machine learning [WORK IN PROGRESS]
 
 In this project I replicate parts of Campbell et al. (2020), relating cholera risk and essential climate variables (ECVs) and using a random forest classifier.
 
@@ -32,7 +32,7 @@ The land surface temperature data need some extra preprocessing due to their dai
 ## Preprocess the data
 
 Second, downloaded outbreaks and ECVs need to be preprocessed:
-- Outbreaks:  `extract_and_clean_cholera_outbreaks.py` and `preprocess_cholera_outbreaks.ipynb`
+- Outbreaks: `extract_and_clean_cholera_outbreaks.py` and `preprocess_cholera_outbreaks.ipynb` *currently still working on this because it's so tricky to properly extract data from pdf files*
 - ECVs: `preprocess_essential_climate_variables.ipynb`
 
 
