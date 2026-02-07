@@ -1,1 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Env
+.venv/
+
+# VS Code
+.vscode/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Data / Artifacts
+data/
+artifacts/
+models/
+*.log
