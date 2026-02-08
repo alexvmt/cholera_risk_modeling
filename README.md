@@ -43,16 +43,16 @@ Third, preprocessed cholera outbreaks and ECVs need to be explored and validated
 - `exploratory_data_analysis_and_validation.ipynb`
 
 ### Cholera outbreaks in India by district (2010 to 2018)
-![Cholera outbreaks in India by district (2010 to 2018)](0_images/cholera_outbreaks_india_district_2010_2018.png 'Cholera outbreaks in India by district (2010 to 2018)')
+![Cholera outbreaks in India by district (2010 to 2018)](media/cholera_outbreaks_india_district_2010_2018.png 'Cholera outbreaks in India by district (2010 to 2018)')
 
 ### Mean sea surface salinity January, April, July and October 2018
-![Mean sea surface salinity 2018](0_images/mean_sss_2018.png 'Mean sea surface salinity 2018')
+![Mean sea surface salinity 2018](media/mean_sss_2018.png 'Mean sea surface salinity 2018')
 
 ### Mean chlorophyll-a concentration January, April, July and October 2018
-![Mean chlorophyll-a concentration 2018](0_images/mean_chlora_2018.png 'Mean chlorophyll-a concentration 2018')
+![Mean chlorophyll-a concentration 2018](media/mean_chlora_2018.png 'Mean chlorophyll-a concentration 2018')
 
 ### Mean land surface temperature January, April, July and October 2018
-![Mean land surface temperature 2018](0_images/mean_lst_2018.png 'Mean land surface temperature 2018')
+![Mean land surface temperature 2018](media/mean_lst_2018.png 'Mean land surface temperature 2018')
 
 
 
@@ -95,7 +95,7 @@ Run the scripts and notebooks directly in their respective directory.
 ## References
 
 ### Original paper
-Campbell AM, Racault M-F, Goult S, Laurenson A. Cholera Risk: A Machine Learning Approach Applied to Essential Climate Variables. International Journal of Environmental Research and Public Health. 2020; 17(24):9378. https://doi.org/10.3390/ijerph17249378 
+Campbell AM, Racault M-F, Goult S, Laurenson A. Cholera Risk: A Machine Learning Approach Applied to Essential Climate Variables. International Journal of Environmental Research and Public Health. 2020; 17(24):9378. https://doi.org/10.3390/ijerph17249378
 
 ### Outbreaks
 National Centre for Disease Control, Directorate General of Health Services. Integrated Disease Surveillance Programme. Available online: http://idsp.nic.in/ (accessed on 28 February 2021).

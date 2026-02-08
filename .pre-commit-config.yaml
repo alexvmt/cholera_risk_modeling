@@ -3,7 +3,7 @@ repos:
     rev: v0.6.8
     hooks:
       - id: ruff
-        args: [--fix]
+        args: ["--fix"]
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -13,3 +13,26 @@ repos:
       - id: check-toml
       - id: end-of-file-fixer
       - id: trailing-whitespace
+
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.8.5
+    hooks:
+      - id: nbqa-ruff
+        args:
+          - --fix
+          - --config=pyproject.toml
+          - --extend-ignore=B018,B015,E501
+        additional_dependencies: ["ruff>=0.15.0"]
+        files: \.ipynb$
+      - id: nbqa-mypy
+        additional_dependencies: ["mypy>=1.19.1"]
+        files: \.ipynb$
+
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
+        files: \.ipynb$
+        args:
+          - --extra-keys
+          - "metadata.kernelspec metadata.language_info"
