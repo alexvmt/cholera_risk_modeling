@@ -8,7 +8,7 @@ fix:
 	uv run ruff format .
 
 typecheck:
-	uv run mypy src
+	uv run ty check src
 
 test:
 	uv run pytest -q
