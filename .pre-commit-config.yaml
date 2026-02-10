@@ -10,11 +10,8 @@ repos:
     hooks:
       - id: ty
         name: ty check
-        entry: ty
-        language: python
-        additional_dependencies: ["ty==0.0.15"]
-        pass_filenames: false
-        args: ["check", "src"]
+        entry: uv run ty check
+        language: system
         files: ^src/.*\.py$
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -35,13 +32,6 @@ repos:
           - --extend-ignore=B018,B015,E501
         additional_dependencies: ["ruff==0.6.8"]
         files: \.ipynb$
-      - id: nbqa
-        name: nbqa-ty
-        entry: nbqa
-        args: ["ty", "check"]
-        additional_dependencies: ["ty==0.0.15"]
-        files: \.ipynb$
-
 
   - repo: https://github.com/kynan/nbstripout
     rev: 0.7.1

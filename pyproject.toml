@@ -44,6 +44,9 @@ per-file-ignores = { "*.ipynb" = ["B018", "B015", "E501"] }
 [tool.ty.environment]
 python-version = "3.10"
 
+[tool.ty.src]
+exclude = ["**/*.ipynb"]
+
 [tool.pytest.ini_options]
 addopts = "-q"
 testpaths = ["tests"]

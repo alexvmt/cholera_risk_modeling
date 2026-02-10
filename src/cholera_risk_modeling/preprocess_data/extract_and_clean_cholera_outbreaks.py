@@ -147,7 +147,7 @@ years = list(np.arange(2010, 2019))
 path = "../../data/outbreaks"
 
 # create empty dataframe
-cholera_outbreaks = pd.DataFrame(columns=["file_name"])
+cholera_outbreaks = pd.DataFrame(columns=pd.Index(["file_name"]))
 
 # loop through years
 for year in years:
