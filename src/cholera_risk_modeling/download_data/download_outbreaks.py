@@ -13,10 +13,10 @@ from bs4 import BeautifulSoup
 print("Download outbreaks...")
 
 # create data directory if it doesn't yet exist
-if not os.path.exists("../../data"):
-    os.mkdir("../../data")
+if not os.path.exists("../../../data"):
+    os.mkdir("../../../data")
 
-os.chdir("../../data")
+os.chdir("../../../data")
 
 # create outbreaks directory if it doesn't yet exist
 if not os.path.exists("outbreaks"):

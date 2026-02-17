@@ -144,7 +144,7 @@ def extract_and_clean_cholera_outbreaks(file):
 years = list(np.arange(2010, 2019))
 
 # set path for reading outbreaks
-path = "../../data/outbreaks"
+path = "../../../data/outbreaks"
 
 # create empty dataframe
 cholera_outbreaks = pd.DataFrame(columns=pd.Index(["file_name"]))
