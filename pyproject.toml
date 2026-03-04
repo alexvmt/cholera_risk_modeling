@@ -1,0 +1,53 @@
+[project]
+name = "cholera-risk-modeling"
+version = "0.1.0"
+description = "Cholera risk modeling"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas",
+    "scikit-learn",
+    "imbalanced-learn",
+    "matplotlib",
+    "seaborn",
+    "beautifulsoup4",
+    "xarray",
+    "geopy",
+    "ipykernel",
+    "jupyterlab",
+    "geopandas",
+    "pyproj",
+    "shapely",
+    "fiona",
+    "nctoolkit",
+    "camelot-py",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.15.0",
+    "ty>=0.0.15",
+    "pytest>=9.0.2",
+    "pre-commit>=4.5.1",
+    "nbqa>=1.8.5",
+    "nbstripout>=0.7.1",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+extend-select = ["F", "E", "W", "B", "I"]
+per-file-ignores = { "*.ipynb" = ["B018", "B015", "E501"] }
+
+[tool.ty.environment]
+python-version = "3.13"
+
+[tool.ty.src]
+exclude = ["**/*.ipynb"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
